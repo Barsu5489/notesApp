@@ -1,0 +1,28 @@
+<%- include('partials/header') %> 
+    <main class="container access-point">
+        <form action="/signup" method="post">
+            <h1>sign-up</h1>
+
+            <% if(error) {%>
+                <p class="error-message">Error </p>
+                <input class = "form-input" type="text" name="email" id="" value="<%= email  %> ">
+                <input class = "form-input" type="text" name="username" id="" value="<%= username  %> ">
+                <input class = "form-input" type="password" name="password" id="" value="<%= password %> ">
+                <input class = "form-input" type="password" name="confirmPassword" id="" value="<%= confirmPassword  %> ">
+                <% } else { %>
+                    <input class = "form-input" type="text" name="email" id="" placeholder="Email">
+                    <input class = "form-input" type="text" name="username" id="" placeholder="username">
+                    <input class = "form-input" type="password" name="password" id="" placeholder="password">
+                    <input class = "form-input" type="password" name="confirmPassword" id="" placeholder="confirm Password">
+                    <% } %>   
+           
+            
+            <input type="submit" value="Sign up" class="btn" >
+            <p>Already have an account <a href="/login">Sign in</a></p>
+
+        </form>
+    </main>
+
+
+
+<%- include('partials/footer')  %> 
